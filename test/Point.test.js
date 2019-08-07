@@ -109,4 +109,14 @@ describe('# Point Test', () => {
     result.x.n.should.be.bignumber.equal(expected.x.n);
     result.y.n.should.be.bignumber.equal(expected.y.n);
   });
+  it('#point.isEqualTo() test', () => {
+    let x1 = '1397412833371199561739821073700250803657896243135281865271178377706226477552';
+    let y1 = '5553249363258359534839534284775046287936738554202234124607038750383734798545';
+    let x2 = '1397412833371199561739821073700250803657896243135281865271178377706226477552';
+    let y2 = '5553249363258359534839534284775046287936738554202234124607038750383734798545';
+    let point1 = new Point(x1, y1);
+    let point2 = new Point(x2, y2);
+    let result = point1.isEqualTo(point2);
+    result.should.be.true;
+  });
 });
