@@ -63,6 +63,12 @@ describe('# Field Test', () => {
     let expected = new FQ(12);
     result.n.should.be.bignumber.equal(expected.n);
   });
+  it('#FQ(12).equal(FQ(12)) should be true', () => {
+    let field1 = new FQ(12)
+    let field2 = new FQ(12);
+    let result = field1.equal(field2);
+    result.should.be.true;
+  });
 });
 
 describe('# Extended euclidean mojular inverse Test', () => {
