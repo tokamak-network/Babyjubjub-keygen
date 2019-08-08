@@ -13,7 +13,7 @@ npm install Babyjubjub
 ### Example
 
 ```javascript
-const { PublicKey, PrivateKey } = require('Babyjubjub');
+const { PublicKey, PrivateKey } = require('babyjubjub');
 
 //get PrivateKey object(field, hexstring)
 let sk = PrivateKey.getRandObj().field;
