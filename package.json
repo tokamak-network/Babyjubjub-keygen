@@ -1,10 +1,10 @@
 {
-  "name": "babyjubjub",
+  "name": "Babyjubjub",
   "version": "1.0.0",
   "description": "Jubjub based public key and private key generator",
-  "homepage" : "https://github.com/Onther-Tech/babyjubjub-keygen",
+  "homepage" : "https://github.com/Onther-Tech/Babyjubjub-keygen",
   "bugs" : {
-    "url" : "https://github.com/Onther-Tech/babyjubjub-keygen/issues",
+    "url" : "https://github.com/Onther-Tech/Babyjubjub-keygen/issues",
     "email" : "kevin.j@onther.io"
   },
   "license" : "(MIT OR Apache-2.0)",
@@ -13,12 +13,14 @@
     "email" : "kevin.j@onther.io",
     "url" : "https://medium.com/@kevin.j"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Onther-Tech/Babyjubjub-keygen.git"
+  },
   "main": "lib/KeyGenerator.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bignumber.js": "^9.0.0",
     "buffer-reverse": "^1.0.1"

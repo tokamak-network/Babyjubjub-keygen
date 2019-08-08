@@ -33,5 +33,3 @@ console.log(pubKey.p.y);
 console.log(pubKey.p.x.n);
 console.log(pubKey.p.y.n);
 ```
-
-# Example
