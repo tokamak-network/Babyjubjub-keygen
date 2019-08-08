@@ -1,8 +1,19 @@
 {
   "name": "babyjubjub",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Jubjub based public key and private key generator",
+  "homepage" : "https://github.com/Onther-Tech/babyjubjub-keygen",
+  "bugs" : {
+    "url" : "https://github.com/Onther-Tech/babyjubjub-keygen/issues",
+    "email" : "kevin.j@onther.io"
+  },
+  "license" : "(MIT OR Apache-2.0)",
+  "author" : {
+    "name" : "Kevin(SoonHyeong) Jeong",
+    "email" : "kevin.j@onther.io",
+    "url" : "https://medium.com/@kevin.j"
+  },
+  "main": "lib/KeyGenerator.js",
   "scripts": {
     "test": "mocha"
   },
