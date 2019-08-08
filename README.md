@@ -1,6 +1,6 @@
 # Babyjubjub-keygen
 
-Babyjubjub-keygen is a library for [Jubjub](https://z.cash/technology/jubjub/)based public/private key generator.
+Babyjubjub-keygen is a library for [Jubjub](https://z.cash/technology/jubjub/) based public/private key generator.
 
 ## Getting Started
 
