@@ -7,7 +7,7 @@ Babyjubjub-keygen is a library for [Jubjub](https://z.cash/technology/jubjub/)ba
 ### Install
 
 ```bash
-npm install Babyjubjub
+npm install babyjubjub
 ```
 
 ### Example
