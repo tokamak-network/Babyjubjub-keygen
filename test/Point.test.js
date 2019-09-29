@@ -146,4 +146,36 @@ describe('# Point Test', () => {
     fromXPoint.x.n.should.be.bignumber.equal(point.x.n);
     fromXPoint.y.n.should.be.bignumber.equal(point.y.n);
   });
+  it('#point.fromY() test1 : fails, why??', () => {
+    //something wrong with zokrates_pycrypto
+    //lhs :  1042440
+    //rhs :  175855458236
+    //xsq :  14010721586289303518355661192337338542303383061659854108957703284567240613699
+    //x :  4486364337523381139525059177894655689486038969562536661510770592259200232169
+    // why Point.x != x ????
+    //Out[5]: Point(x=17401878534315894082721346567362619399062325430853497682187433594316608263448, y=1021)
+    let x = "17401878534315894082721346567362619399062325430853497682187433594316608263448";
+    let y = "1021";
+    let point = new Point(x,y);
+    let fromYPoint = Point.fromY(new FQ(y));
+    fromYPoint.x.n.should.be.bignumber.equal(point.x.n);
+    fromYPoint.y.n.should.be.bignumber.equal(point.y.n);
+  });
+  it('#point.fromY() test2', () => {
+    let x = "16696856622929395669886984435496750311470719675623160384963263454181866639831";
+    let y = "1022";
+    let point = new Point(x,y);
+    let fromYPoint = Point.fromY(new FQ(y));
+    fromYPoint.x.n.should.be.bignumber.equal(point.x.n);
+    fromYPoint.y.n.should.be.bignumber.equal(point.y.n);
+  });
+  it('#point.fromY() test3', () => {
+    let x = "17073035651359640367767834133046374442022723638496538643701087671485703769102";
+    let y = "1025";
+    let point = new Point(x,y);
+    let fromYPoint = Point.fromY(new FQ(y));
+    //console.log(fromYPoint.x.n.toFixed());
+    fromYPoint.x.n.should.be.bignumber.equal(point.x.n);
+    fromYPoint.y.n.should.be.bignumber.equal(point.y.n);
+  });
 });
