@@ -1,4 +1,5 @@
 const { Point } = require("../lib/Point");
+const { FQ } = require("../lib/Field");
 
 const chai = require('chai');
 const BigNumber = require('bignumber.js');
@@ -128,5 +129,21 @@ describe('# Point Test', () => {
     let point2 = new Point(x2, y2);
     let result = point1.isEqualTo(point2);
     result.should.be.false;
+  });
+  it('#point.fromX() test1', () => {
+    let x = "121";
+    let y = "17203749883372929187423129789711655305131231257277919836786222549224117445931";
+    let point = new Point(x,y);
+    let fromXPoint = Point.fromX(new FQ(x));
+    fromXPoint.x.n.should.be.bignumber.equal(point.x.n);
+    fromXPoint.y.n.should.be.bignumber.equal(point.y.n);
+  });
+  it('#point.fromX() test2', () => {
+    let x = "122";
+    let y = "17562579587342513510093605690919011444213684481872519288154677582226765862762";
+    let point = new Point(x,y);
+    let fromXPoint = Point.fromX(new FQ(x));
+    fromXPoint.x.n.should.be.bignumber.equal(point.x.n);
+    fromXPoint.y.n.should.be.bignumber.equal(point.y.n);
   });
 });
