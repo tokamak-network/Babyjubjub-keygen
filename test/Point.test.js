@@ -279,4 +279,16 @@ describe('# Point Test2', () => {
     expectedPoint.y.n.should.be.bignumber.equal(data.point.y.n);
     added.should.be.bignumber.equal(data.added);
   });
+  it('#point.fieldToPoint test8', () => {
+    let x = new BigNumber("12381278947198279618417985619562218925718927659861296391");
+    let added = new BigNumber("1");
+    let expectedY = "17471360650760629654703661741412061237575509987147787500284266383562785515495";
+    let expectedPoint = Point.fromX(new FQ(x.plus(added)));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    expectedPoint.y.n.should.be.bignumber.equal(data.point.y.n);
+    added.should.be.bignumber.equal(data.added);
+  });
 });
