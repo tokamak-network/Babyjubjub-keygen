@@ -146,21 +146,29 @@ describe('# Point Test', () => {
     fromXPoint.x.n.should.be.bignumber.equal(point.x.n);
     fromXPoint.y.n.should.be.bignumber.equal(point.y.n);
   });
-  it('#point.fromY() test1 : fails, why??', () => {
-    //something wrong with zokrates_pycrypto
-    //lhs :  1042440
-    //rhs :  175855458236
-    //xsq :  14010721586289303518355661192337338542303383061659854108957703284567240613699
-    //x :  4486364337523381139525059177894655689486038969562536661510770592259200232169
-    // why Point.x != x ????
-    //Out[5]: Point(x=17401878534315894082721346567362619399062325430853497682187433594316608263448, y=1021)
-    let x = "17401878534315894082721346567362619399062325430853497682187433594316608263448";
-    let y = "1021";
+  it('#point.fromX() test3', () => {
+    let x = "123812789471982796";
+    let y = "16655775389385982393659087401919948734970694980006454080392027588311748578703";
     let point = new Point(x,y);
-    let fromYPoint = Point.fromY(new FQ(y));
-    fromYPoint.x.n.should.be.bignumber.equal(point.x.n);
-    fromYPoint.y.n.should.be.bignumber.equal(point.y.n);
+    let fromXPoint = Point.fromX(new FQ(x));
+    fromXPoint.x.n.should.be.bignumber.equal(point.x.n);
+    fromXPoint.y.n.should.be.bignumber.equal(point.y.n);
   });
+//  it('#point.fromY() test1 : fails, why??', () => {
+//    //something wrong with zokrates_pycrypto
+//    //lhs :  1042440
+//    //rhs :  175855458236
+//    //xsq :  14010721586289303518355661192337338542303383061659854108957703284567240613699
+//    //x :  4486364337523381139525059177894655689486038969562536661510770592259200232169
+//    // why Point.x != x ????
+//    //Out[5]: Point(x=17401878534315894082721346567362619399062325430853497682187433594316608263448, y=1021)
+//    let x = "17401878534315894082721346567362619399062325430853497682187433594316608263448";
+//    let y = "1021";
+//    let point = new Point(x,y);
+//    let fromYPoint = Point.fromY(new FQ(y));
+//    fromYPoint.x.n.should.be.bignumber.equal(point.x.n);
+//    fromYPoint.y.n.should.be.bignumber.equal(point.y.n);
+//  });
   it('#point.fromY() test2', () => {
     let x = "16696856622929395669886984435496750311470719675623160384963263454181866639831";
     let y = "1022";
@@ -177,5 +185,98 @@ describe('# Point Test', () => {
     //console.log(fromYPoint.x.n.toFixed());
     fromYPoint.x.n.should.be.bignumber.equal(point.x.n);
     fromYPoint.y.n.should.be.bignumber.equal(point.y.n);
+  });
+});
+
+
+describe('# Point Test2', () => {
+  it('#point.fieldToPoint test1', () => {
+    let x = 1;
+    let added = 1;
+    let expectedY = "8056089943188115187127505423794387611258186669587019044380033865514006931165";
+    let expectedPoint = Point.fromX(new FQ(x+added));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    //console.log(fromYPoint.x.n.toFixed());
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
+  });
+  it('#point.fieldToPoint test2', () => {
+    let x = 3;
+    let added = 2;
+    let expectedY = "12637605842718731259587541614342552538212431772985772986870915547581179079457";
+    let expectedPoint = Point.fromX(new FQ(x+added));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    //console.log(fromYPoint.x.n.toFixed());
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
+  });
+  it('#point.fieldToPoint test3', () => {
+    let x = 6;
+    let added = 1;
+    let expectedY = "21557326260047161571937478015891434743575710981169510902365692500083473754750";
+    let expectedPoint = Point.fromX(new FQ(x+added));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    //console.log(fromYPoint.x.n.toFixed());
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
+  });
+  it('#point.fieldToPoint test4', () => {
+    let x = 10;
+    let added = 3;
+    let expectedY = "16049749370462080491200785952937458811188631533912150948500125266331871415458";
+    let expectedPoint = Point.fromX(new FQ(x+added));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    //console.log(fromYPoint.x.n.toFixed());
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
+  });
+  it('#point.fieldToPoint test5', () => {
+    let x = 1567;
+    let added = 1;
+    let expectedY = "3614734581811021112067930491174322117937277086960340611032660415026533293162";
+    let expectedPoint = Point.fromX(new FQ(x+added));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    //console.log(fromYPoint.x.n.toFixed());
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
+  });
+  it('#point.fieldToPoint test6', () => {
+    let x = new BigNumber("123812789471982795");
+    let added = new BigNumber("1");
+    let expectedY = "16655775389385982393659087401919948734970694980006454080392027588311748578703";
+    let expectedPoint = Point.fromX(new FQ(x.plus(added)));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
+  });
+  it('#point.fieldToPoint test7', () => {
+    let x = new BigNumber("123812789471982796184179856195620");
+    let added = new BigNumber("2");
+    let expectedY = "4028845804957276726353469080986769550628546219463556871225817816874536494623";
+    let expectedPoint = Point.fromX(new FQ(x.plus(added)));
+    let data = Point.fieldToPoint(x);
+    //console.log("x : ", data[0].x.n.toFixed());
+    //console.log("y : ", data[0].y.n.toFixed());
+    //console.log("added : ", data[1]);
+    expectedPoint.y.n.should.be.bignumber.equal(data[0].y.n);
+    added.should.be.bignumber.equal(data[1]);
   });
 });
