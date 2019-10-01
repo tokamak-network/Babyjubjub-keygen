@@ -1,4 +1,4 @@
-const { PrivateKey, PublicKey } = require('../lib/KeyGenerator');
+const { PrivateKey, PublicKey } = require('../lib/babyjubjub');
 
 const chai = require('chai');
 const BigNumber = require('bignumber.js');
