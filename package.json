@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/Onther-Tech/babyjubjub-keygen.git"
   },
-  "main": "lib/KeyGenerator.js",
+  "main": "lib/babyjubjub.js",
   "scripts": {
     "test": "mocha"
   },
