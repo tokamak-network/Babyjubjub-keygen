@@ -1,7 +1,7 @@
 {
   "name": "babyjubjub",
   "version": "1.0.3",
-  "description": "Jubjub based public key and private key generator",
+  "description": "jubjub based ECC gadget",
   "homepage": "https://github.com/Onther-Tech/Babyjubjub-keygen",
   "bugs": {
     "url": "https://github.com/Onther-Tech/Babyjubjub-keygen/issues",
